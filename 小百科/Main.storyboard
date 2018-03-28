@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fyD-GH-TRB">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="pkA-6E-nMu">
+            <objects>
+                <navigationController id="fyD-GH-TRB" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rts-Ys-K6s">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Mj4-ZK-L8L" kind="relationship" relationship="rootViewController" id="gzr-Dl-A6z"/>
+                        <segue destination="Mj4-ZK-L8L" kind="show" id="KU2-HD-D5I">
+                            <nil key="action"/>
+                        </segue>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a4l-aN-iDX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1857" y="83"/>
+        </scene>
+        <!--封面-->
+        <scene sceneID="fP8-TQ-B2m">
+            <objects>
+                <viewController id="Mj4-ZK-L8L" customClass="ViewController" customModule="自然灾害小百科電子書" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HhE-zR-sZM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="自然灾害小百科電子書" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tFn-8c-Y6A">
+                                <rect key="frame" x="62" y="163" width="293" height="447"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75812441109999995" green="0.83776623009999995" blue="0.93352574109999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.98039215690000003" green="0.1236030489" blue="0.1695195766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="93"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" shipmentTrackingNumber="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.75812441109999995" green="0.83776623009999995" blue="0.93352574109999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <viewLayoutGuide key="safeArea" id="v8J-oo-074"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="426-qc-sN6" appends="YES" id="4Hf-HX-N1b"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="封面" id="ZNK-2i-egH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rk2-pA-fVw" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="426-qc-sN6">
+                    <connections>
+                        <segue destination="N60-wy-HO4" kind="show" id="NLi-hv-WeS">
+                            <nil key="action"/>
+                        </segue>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-1094" y="83"/>
+        </scene>
+        <!--目录-->
+        <scene sceneID="cLn-5N-mRt">
+            <objects>
+                <tableViewController id="N60-wy-HO4" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="b4X-7T-GBd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="ibz-Sn-TwT">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="MjL-Kh-Jg1">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MjL-Kh-Jg1" id="e7J-Tg-PCk">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="介紹" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJO-Wd-aif">
+                                                    <rect key="frame" x="13" y="11" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nbo-9h-GLw">
+                                                    <rect key="frame" x="348" y="3" width="46" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="-&gt;"/>
+                                                    <connections>
+                                                        <segue destination="vUU-ie-y3L" kind="show" id="Xjy-n2-9Yq"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Rcl-m8-Nef">
+                                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rcl-m8-Nef" id="zwg-5i-HRP">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="寒潮" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Jh-aE-WSz">
+                                                    <rect key="frame" x="13" y="11" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Viu-Nl-jvl">
+                                                    <rect key="frame" x="348" y="4" width="46" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="-&gt;"/>
+                                                    <connections>
+                                                        <segue destination="Xzl-iS-nI1" kind="show" id="Lx7-wC-Dx9"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="zZe-qT-1rf">
+                                        <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zZe-qT-1rf" id="3ky-zM-PvD">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="梅雨" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJI-uo-wVW">
+                                                    <rect key="frame" x="13" y="11" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3D-id-n5a">
+                                                    <rect key="frame" x="348" y="6" width="46" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="-&gt;"/>
+                                                    <connections>
+                                                        <segue destination="OIb-Wc-qbJ" kind="show" id="khW-Qo-OFH"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="d0q-By-BIv">
+                                        <rect key="frame" x="0.0" y="132" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d0q-By-BIv" id="pR7-sZ-afi">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="颱風" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HG5-Rw-2tq">
+                                                    <rect key="frame" x="13" y="11" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gh4-Xh-tFf">
+                                                    <rect key="frame" x="348" y="6" width="46" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="-&gt;"/>
+                                                    <connections>
+                                                        <segue destination="63E-ul-Xdf" kind="show" id="SML-ig-k0E"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="V4y-kM-4vm">
+                                        <rect key="frame" x="0.0" y="176" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V4y-kM-4vm" id="bSJ-7U-0f1">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="熱浪" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORp-Rf-bcR">
+                                                    <rect key="frame" x="13" y="11" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iwu-CQ-Tpt">
+                                                    <rect key="frame" x="348" y="11" width="46" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="-&gt;"/>
+                                                    <connections>
+                                                        <segue destination="viA-R3-pb8" kind="show" id="i7v-EI-jen"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="fye-1m-PPg">
+                                        <rect key="frame" x="0.0" y="220" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fye-1m-PPg" id="Wz1-et-TDN">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="秋老虎" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnC-zO-f5q">
+                                                    <rect key="frame" x="13" y="11" width="57" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E39-3B-lFB">
+                                                    <rect key="frame" x="348" y="11" width="46" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="-&gt;"/>
+                                                    <connections>
+                                                        <segue destination="uU0-uf-JWj" kind="show" id="NhW-4n-LxQ"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="e9y-WC-SXj">
+                                        <rect key="frame" x="0.0" y="264" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e9y-WC-SXj" id="QoI-gg-LvX">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="火山" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xbf-KV-D2h">
+                                                    <rect key="frame" x="13" y="11" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5TG-c0-Thi">
+                                                    <rect key="frame" x="348" y="3" width="46" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="-&gt;"/>
+                                                    <connections>
+                                                        <segue destination="HHP-gP-r4R" kind="show" id="OON-QP-J23"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="obY-i5-DbR">
+                                        <rect key="frame" x="0.0" y="308" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="obY-i5-DbR" id="we8-lf-Apq">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="地震" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5U-d7-XNl">
+                                                    <rect key="frame" x="13" y="11" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OU6-8H-n68">
+                                                    <rect key="frame" x="348" y="6" width="46" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="-&gt;"/>
+                                                    <connections>
+                                                        <segue destination="asu-3B-SwV" kind="show" id="BaS-kw-dqs"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <gestureRecognizers/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="N60-wy-HO4" id="ZcE-8Y-t2m"/>
+                            <outlet property="delegate" destination="N60-wy-HO4" id="q6z-lK-rcq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="目录" id="Bo0-FY-wnt"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sua-ny-NGE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-317.39130434782612" y="81.521739130434796"/>
+        </scene>
+        <!--介紹-->
+        <scene sceneID="A7g-1T-LI8">
+            <objects>
+                <viewController id="vUU-ie-y3L" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sg2-8E-gAd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Taiwan.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="4mS-rD-Mgm">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" text="台灣是個特別的島，是個寶島同時也是鬼島。為什麼是鬼島呢？台灣每年都受到了不少自然災害的影響例如西伯利亞的冷氣團、颱風、地震等等。所以我收集有關資料並製成電子書。希望大家讀完後，不但能知道各種各樣自然災害及能在發生時如何去應對。" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uqU-sI-buz">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="9Fj-z0-vpU"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="介紹" id="gBe-JQ-Pdb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jHe-ij-ubA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="393" y="-247"/>
+        </scene>
+        <!--寒潮-->
+        <scene sceneID="ctE-ID-EK3">
+            <objects>
+                <viewController id="Xzl-iS-nI1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vhl-cQ-sk1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Taiwan.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="D4c-yG-sij">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6pJ-mB-D6K">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">寒潮，又稱寒流，是冬季主要天氣現象之一，一般而言，寒潮是指一高氣壓在高緯生成，冷高壓向低緯侵襲，最後出海變性的冷空氣。在寒潮侵襲期間，冷空氣引起成當地氣溫驟降，地面氣壓驟升，有時更引起強風，大浪。寒潮可以导致心脏病發作尤其老人家。寒潮会导致漁類或农作物凍死，造成產业亏损。对一般人只要身体保暖及热水器瓦斯安全。农业与漁业需時時关注天气变化保护漁類或农作物。老人家也尽量减少外出。</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Syp-TZ-SGs"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="寒潮" id="6yt-Cc-wxy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xRw-eQ-cpG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1125" y="-247"/>
+        </scene>
+        <!--目录-->
+        <scene sceneID="5IC-et-aDM">
+            <objects>
+                <viewController id="y4v-wv-lOa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pzx-bv-l5V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Taiwan.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="EzH-WL-PJ8">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="4511421" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VZr-6p-ava">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="iaY-Wa-7IM"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="目录" id="I9P-l5-Let"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CMs-gM-4bg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2706" y="-156"/>
+        </scene>
+        <!--梅雨-->
+        <scene sceneID="TJU-Y8-13S">
+            <objects>
+                <viewController id="OIb-Wc-qbJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0LL-ld-64K">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Taiwan.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="a4w-Db-XiP">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4kp-dv-nk5">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">梅雨，又稱黃梅天，指春夏之交冷熱空氣交鋒而成之鋒面雨，即每年5月至6月之間華中地區、臺灣、日本中南部和韓國南部等地持續天陰有雨的自然氣候現象。梅雨季節過後，華中、日本、韓國、臺灣等地的天氣開始由太平洋副熱帶高壓主導，正式進入炎熱的夏季。
+沒梅雨:乾旱
+強梅雨:水災及土石流</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="dlL-b4-YD5"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="梅雨" id="cka-Ze-Ylh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oAX-W8-hR7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="416" y="439"/>
+        </scene>
+        <!--颱風-->
+        <scene sceneID="OPw-Js-pU1">
+            <objects>
+                <viewController id="63E-ul-Xdf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vS2-EB-27g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Taiwan.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wd4-iR-5mV">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KBw-Jq-YU4">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">颱風是赤道以北，國際換日線以西，亞太國家或地區對熱帶氣旋的一個分級。出現最多颱風的月份是8月，其次是7月和9月。
+影響:
+大風：颶風級的風力足以損壞以至摧毀陸地上的建築、橋樑、車輛等。特別是在建築物沒有被加固的地區，造成破壞更大。大風亦可以把雜物吹到半空，使戶外環境變成非常危險。周圍亦可能產生焚風或龍捲風。
+風暴潮：因為熱帶氣旋的風及氣壓造成的水面上升，可以淹沒沿海地區，倘若適逄天文高潮，危害更大。風暴潮往往是熱帶氣旋各種破壞之中奪去生命最多的。 （注意：風暴潮有別於海嘯，風暴潮（英語：Storm surge）是風暴的低氣壓及狂風所引發的持續性巨浪，海嘯（英語：Tsunami）是海底地震所產生的短暫漸進式巨浪，並向陸地沿岸衝過去。）
+暴雨：熱帶氣旋可以引起持續的傾盆大雨。與西南季風交互產生西南氣流或與東北季風交互產生共伴效應使雨量加倍。在山區的雨勢更大，並且可能引起河水氾濫，土石流及山泥傾瀉。
+好處:幫台灣水庫加水，減少干旱發生。</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="eGV-Hh-kBe"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="颱風" id="RHi-Wt-evY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8lQ-Zr-MjD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1181" y="439"/>
+        </scene>
+        <!--火山-->
+        <scene sceneID="322-Wq-9oe">
+            <objects>
+                <viewController id="HHP-gP-r4R" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rxo-3M-Nt9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Taiwan.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="3Zy-Tm-4MT">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LJs-zp-hn2">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">火山是地表下在岩漿庫中的高溫岩漿及其有關的氣體、碎屑從行星的地殼中噴出而形成的，具有特殊形態的地質結構。
+地球上的火山發生是因為地殼被分裂成17個主要的和剛性的地殼板塊，它們漂浮在地函的一個更熱和更軟的層。火山可以分為死火山和活火山。在一段時間內，沒有出現噴發事件的活火山叫做睡火山（休眠火山）。另外還有一種泥火山，它在科學上嚴格來說不屬於火山，但是許多社會大眾也把它看作是火山的一種類型。火山爆發是一種很嚴重的自然災害，它常常伴有地震。因此火山噴發會對人類造成危害，但同時它也帶來一些好處。例如：可以促進寶石的形成；擴大陸地的面積（夏威夷群島就是由火山噴發而形成的）；作為觀光旅遊考察景點，推動旅遊業，如日本的富士山。
+火山噴發和人類的活動息息相關。火山作用具有毀滅性的破壞力，不僅造成人類財產的損失，更會危及人類與大自然動、植物的生命</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="BMv-vF-IYO"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="火山" id="s6j-MC-j2e"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6xi-Uc-EQj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-317" y="852"/>
+        </scene>
+        <!--地震-->
+        <scene sceneID="MrS-Wq-IMG">
+            <objects>
+                <viewController id="asu-3B-SwV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dYk-NZ-HUA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Taiwan.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="xBN-Jf-PEz">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NUI-Eq-VDw">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">地震，可由自然現像如地殼突然運動、火山活動及隕石撞擊引起，亦可由人為活動如地下核試驗造成。歷史曾記載的災害性地震主要由地殼突然運動所造成，地殼在板塊運動的過程中累積應力，當地殼無法繼續累積應力時破裂釋放出地震波，使地面發生震動，震動可能引發山泥傾瀉甚或火山活動。如果地震在海底發生，海床的移動甚至會引發海嘯。在防震性能比較差且人口相對集中的區域，芮氏規模5以上的地震就有可能造成人員傷亡。
+地震產生的地震波可直接造成建築物的破壞甚至倒塌；破壞地面，產生地面裂縫，塌陷等；發生在山區還可能引起山體滑坡，雪崩等；而發生在海底的地震則可能引起海嘯。餘震會使破壞更加嚴重。地震引發的次生災害主要有建築物倒塌，山體滑坡，土壤液化，海嘯以及管道破裂等引起的火災，水災和毒氣洩漏等。此外當傷亡人員屍體不能及時清理，或污穢物污染了飲用水時，有可能導致傳染病的爆發。在有些地震中，這些次生災害造成的人員傷亡和財產損失可能超過地震帶來的直接破壞。
+台灣房子大多有5級左右的防震，但是仍要密切留意任何地震消息尤其國家緊急消息。</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="9Lz-ra-cPe"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="地震" id="aDW-hm-GBC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WGM-uc-MKi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1180" y="1109"/>
+        </scene>
+        <!--秋老虎-->
+        <scene sceneID="NPb-rS-Ixl">
+            <objects>
+                <viewController id="uU0-uf-JWj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3y5-kC-L15">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Taiwan.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aOI-22-ymP">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WQO-QS-req">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">秋老虎是中國民間指立秋(8月8日左右)以後短期回熱天氣。一般發生在8、9月之交，持續日數約7-15天。這種天氣出現的原因是南退後的副熱帶高壓又再度控制江淮及附近地區，形成連日晴朗、日射強烈，重新出現暑熱天氣，人們感到炎熱難受，故稱「秋老虎」。
+秋老虎會使乾旱更加嚴重，發生時更應該節省用水保護水資源。同時也注意身體不要中署了。</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="nmw-HD-KH6"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="秋老虎" id="wXj-QU-gWx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2zo-Jo-kSN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="416" y="1109"/>
+        </scene>
+        <!--熱浪-->
+        <scene sceneID="09I-BO-h70">
+            <objects>
+                <viewController id="viA-R3-pb8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GRK-pl-P5E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Taiwan.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="4a8-oH-1Sn">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="W0x-jz-ZOB">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">熱浪是指天氣在某一段時間內持續地保持異常高的氣溫（相對於該地區多年平均氣溫而言），也有可能伴隨有很高的空氣濕度。這個術語通常與地區相聯繫，所以一個處於相對較熱氣候的地區來說是正常的溫度，對另一個通常處於較冷氣候的地區來說可能是熱浪。
+台灣熱浪多發生於夏季，當台北37C連續3天以上。
+熱浪引起的高溫天氣可以導致人死亡，尤其是老年人。台灣還會發生用電危機。</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="KS9-tQ-XLo"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="熱浪" id="tWm-If-xp6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yOw-ni-bRy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1872" y="439"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Taiwan.jpg" width="417" height="735"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="gzr-Dl-A6z"/>
+    </inferredMetricsTieBreakers>
+</document>
